@@ -28,7 +28,7 @@ The following are useful strategies for test case writing.
     - varying amounts of chained commands: `ls; pwd; ls -a dir; ....` where each chained command should be executed by a separate process. 
     - different connectors: `ls|| pwd ` or `ls -l . && pwd` 
 
-- Specification Based: Test functionality against existing specifications. For example, check what _Bash_ does then run that same test on your shell. The `info` command or `--help` flag also give useful information to help you figure out how to get your test cases working properly (try `info ls` and `ls --help` as an example). 
+- Specification Based: Test functionality against existing specifications. For example, check what _Bash_ does then run that same test on your shell. The `info` command and `--help` flag also give useful information (try `info ls` and `ls --help` as an example). 
 
   - Consider the second homework assignment, where you are tasked with implementing `ls`. The following is output in Bash when `ls -l` is run:
 
@@ -41,12 +41,12 @@ The following are useful strategies for test case writing.
   -rw-rw-r-- 1 owner group    0 Dec 18 23:38 file2
   ```
 
-   `total 24` indicates that there are 24 disk blocks taken by the directory, while the first column in the following lines indicates the type of file and the read, write, and execute permissions for the owner of the file, the group, and all other users. The following columns are the number of hard copies, owner name, group name, size in bytes, time stamp, and the name of the file. There are many more subtleties with the different combinations of all three flags you have to implement (`-a`, `-l`, `-R`), such as the order the `.` files take in the listing of all the files or the order in which to recurse subdirectories and print their contents. Take an incremental approach, making sure you have the same output as Bash with one flag, then two flags, and finally all three. 
+   `total 24` indicates that there are 24 disk blocks taken by the directory, while the first column in the following lines indicates the type of file and the read, write, and execute permissions for the owner of the file, the group, and all other users. The following columns are the number of hard copies, owner name, group name, size in bytes, time stamp, and the name of the file. There are many more subtleties with the different combinations of all three flags you have to implement (`-a`, `-l`, `-R`), such as the order the `.` files take in the listing of all the files or the order in which to recurse subdirectories and print their contents. Take an incremental approach, making sure you have the test cases for one flag at a time working first, then two flags, and finally all three. 
   
 
 - Risk Based: In this approach, the tester attempts to break the program in order to get an idea of what still needs work.
   
-  - For example, say I am implementing `ls` (second homework assignment). I know `ls -a -l -R` works fine, but does `ls -alR`, and even `ls dir1 -la file1 -RaRaRa dir1 -l file2`, work? The latter two examples should work and may even find issue. 
+  - For example, say I am implementing `ls` (second homework assignment). I know `ls -a -l -R` works fine, but does `ls -alR`, and even `ls dir1 -la file1 -RaRaRa dir1 -l file2`, work? The latter two examples should work and may even find an issue. 
 
 - Negative Test Cases: Test whether the program _does not_ do things that it _shouldn't_. The tester looks for any funny behavior in the program. These tests check whether there are appropriate error checks and error messages where there should be.
   
