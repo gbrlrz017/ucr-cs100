@@ -1,8 +1,6 @@
 Test Cases
 ==========
 
-**What is a “test case”?**
-
 Finding and fixing _bugs_ is an important part of the programming process. A bug you didn't know existed can come back to haunt you later. For example, consider NASA's Mars Climate Orbiter which, in 1998, was tasked with looking for water and studying the weather on Mars. However, some of its programmers had been working in SI units while others had been working in English units. The result from this lack of communication was a _bug_ that made the thrusters 4.45 times more powerful than they should have been. This $327.6 million project was consequently lost in space, most likely in pieces. 
 
 No program is ever perfect (not even those that NASA writes). But a good programmer makes a habit out of making sure her or his program is as bugless as possible.
