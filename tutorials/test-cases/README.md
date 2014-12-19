@@ -91,22 +91,10 @@ The above template lets you document test cases and the useful information that 
 	
 Here is an example of how to fill in the test table. The program in question implements a basic version of the _Bash command shell_ using `execvp`, `fork`, and `waitpid` (see [requirement specs](https://github.com/mikeizbicki/ucr-cs100/blob/cs100-2014fall/assignments/hw/hw0-rshell/README.md) for this program). These are only some of the possible test cases I tried.
 
-![screenshot from 2014-12-16 23 38 05](https://cloud.githubusercontent.com/assets/9201839/5468037/df8d176a-857d-11e4-9f61-4a18ecafcc2d.png)
-![screenshot from 2014-12-16 23 38 46](https://cloud.githubusercontent.com/assets/9201839/5468045/e78666d8-857d-11e4-945e-3cbc836670c2.png)
-![screenshot from 2014-12-16 23 39 01](https://cloud.githubusercontent.com/assets/9201839/5468060/0ea8e5a6-857e-11e4-973c-e43116386799.png)
 
-
-
-
-
-![test-cases-full3](https://cloud.githubusercontent.com/assets/9201839/5502853/c0962858-8724-11e4-80ce-7d1ede5e40b6.png)
-
-
-
-![test-cases-full4](https://cloud.githubusercontent.com/assets/9201839/5502886/3911bb12-8725-11e4-9842-5bd417babfdd.png)
-
-
-
+![test-1](https://cloud.githubusercontent.com/assets/9201839/5503021/bae61ccc-8726-11e4-9890-cfa0b788e38a.png)
+![test-2](https://cloud.githubusercontent.com/assets/9201839/5503018/b73ca596-8726-11e4-8dc7-e5209c6a93f1.png)
+![test-3](https://cloud.githubusercontent.com/assets/9201839/5503015/b3d547fa-8726-11e4-87a0-cfb34b3b5925.png)
 
 
 Notice the trend in the failed test cases: _parsing_ fails when connectors have no spacing between them and other text, like "..-f**&&**ls...". Having it all documented allows the tester to see the extent of the problem: the issue appears for all three connectors, `;` `||` and `&&`, which can be considered _boundary values_.
