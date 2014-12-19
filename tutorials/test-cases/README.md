@@ -30,7 +30,7 @@ The following are useful strategies for test case writing.
 
 - Specification Based: Test functionality against existing specifications. For example, check what _Bash_ does then run that same test on your shell. The `info` command or `--help` flag also give useful information to help you figure out how to get your test cases working properly (try `info ls` and `ls --help` as an example). 
 
-  - Consider your second homework assignment, where you are tasked with implementing `ls`. In the output in Bash when `ls -l` is run:
+  - Consider the second homework assignment, where you are tasked with implementing `ls`. The following is output in Bash when `ls -l` is run:
 
   ```
   $ ls -l
@@ -41,7 +41,7 @@ The following are useful strategies for test case writing.
   -rw-rw-r-- 1 owner group    0 Dec 18 23:38 file2
   ```
 
-    `total 24` means there are 24 disk blocks taken by the directory. The first column in the following lines indicates the type of file and the read, write, and execute permissions for the owner of the file, members of the group owning the file, and all other users. The second, third, fourth, fifth, and sixth columns are the number of hard copies, owner name, group name, size in bytes, time stamp, and name of the file, respectively. There are many more subtleties involved when you have different combinations of all three flags you have to implement (`-a`, `-l`, `-R`), such as the order the `.` files take in the listing of all the files and the order in which to recurse subdirectories and print their contents out. Take an incremental approach, making sure you have the same output as Bash with one flag, then two flags, and finally all three. 
+      `total 24` means there are 24 disk blocks taken by the directory. The first column in the following lines indicates the type of file and the read, write, and execute permissions for the owner of the file, members of the group owning the file, and all other users. The second, third, fourth, fifth, and sixth columns are the number of hard copies, owner name, group name, size in bytes, time stamp, and name of the file, respectively. There are many more subtleties involved when you have different combinations of all three flags you have to implement (`-a`, `-l`, `-R`), such as the order the `.` files take in the listing of all the files and the order in which to recurse subdirectories and print their contents out. Take an incremental approach, making sure you have the same output as Bash with one flag, then two flags, and finally all three. 
   
 
 - Risk Based: In this approach, the tester attempts to break the program in order to get an idea of what still needs work.
